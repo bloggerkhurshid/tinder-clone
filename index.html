@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder</title>
+    <style>
+        .detailcontainer{
+            background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+        }
+
+        .navbar{
+            background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.332));
+        }
+    </style>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-black">
+        <div class="imagecontainer w-full h-screen relative overflow-hidden">
+            <div class="maincard z-[3] w-[130%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[130%]">
+                <img class="w-full h-full object-cover" src="" alt="">
+            </div>  
+            <div class="incomingcard z-[2] w-[130%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[130%]">
+                <img class="w-full h-full object-cover" src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="absolute top-0 left-0 z-[4] w-full h-screen flex justify-between flex-col">
+        <div class="navbar px-5 py-6  flex justify-between items-center text-white">
+            <div class="prflimg w-[3rem] h-[3rem] rounded-full bg-red-600 overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/12995508/pexels-photo-12995508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <h3 class="capitalize text-xl tracking-tight">they liked you</h3>
+            <div class="chaticon rounded-full w-[3rem] h-[3rem] bg-white/20 flex items-center justify-center">
+                <i class="opacity-80  ri-chat-1-fill"></i>
+                <div class="badge flex items-center justify-center | absolute w-5 h-5 rounded-full bg-red-700 top-5 right-5">
+                    <h5 class="text-xs font-medium">5</h5>
+                </div>
+            </div>
+        </div>
+        <div class="detailcontainer w-full">
+            <div class="details px-5 py-6 ">
+                <div class="element location flex gap-4">
+                    <i class="w-[1.6rem] h-[1.6rem] flex items-center justify-center rounded-full bg-white font-medium ri-map-pin-2-line"></i>
+                    <h3 class="text-white">New Delhi, India</h3>
+                </div>
+                <div class="element name flex text-white gap-5 mt-1 font-regular tracking-tighter">
+                    <h1 class="text-5xl">Akanksha</h1>
+                    <h1 class="text-5xl opacity-60">24</h1>
+                </div>
+                <div class="element tags flex gap-3 text-white mt-5">
+                    
+                </div>
+                <div class="element bio text-white/90 mt-5">
+                    <h3 class="text-xl">Bio</h3>
+                    <p class="text-sm mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum distinctio quae fugiat vel, dignissimos aliquid adipisci? Tempore dolore consectetur minus, eligendi sunt, quas voluptatibus voluptatem cum modi, est fugit ut.</p>
+                </div>
+                <div class="element flex items-start mt-10 gap-1">
+                    <button class="deny bg-white rounded-xl w-1/2 py-3">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <button class="accept bg-red-600 rounded-xl text-white w-1/2 py-3">
+                        <i class="ri-heart-3-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
