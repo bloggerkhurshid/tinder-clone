@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=375, initial-scale=1.0"> <!-- Simulate mobile view on desktop -->
     <title>Tinder</title>
     <style>
         .detailcontainer{
@@ -12,11 +12,49 @@
         .navbar{
             background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.332));
         }
+
+        /* Mobile-specific styles */
+        @media (min-width: 375px) {
+            .imagecontainer, .maincard, .incomingcard {
+                width: 100%;
+                height: 100%;
+            }
+
+            .navbar {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .detailcontainer {
+                padding: 1rem;
+            }
+
+            .details {
+                padding: 1rem;
+            }
+
+            .element {
+                margin-bottom: 1.5rem;
+            }
+
+            /* Force mobile layout for desktop */
+            body {
+                max-width: 375px; /* Mobile width */
+                margin: 0 auto;
+                overflow-x: hidden;
+            }
+
+            .detailcontainer {
+                max-width: 375px;
+            }
+        }
+
+        /* Custom Styling for Icons and Buttons */
+        .deny, .accept {
+            font-size: 1.5rem;
+        }
     </style>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -31,13 +69,13 @@
         </div>
     </div>
     <div class="absolute top-0 left-0 z-[4] w-full h-screen flex justify-between flex-col">
-        <div class="navbar px-5 py-6  flex justify-between items-center text-white">
+        <div class="navbar px-5 py-6 flex justify-between items-center text-white">
             <div class="prflimg w-[3rem] h-[3rem] rounded-full bg-red-600 overflow-hidden">
                 <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/12995508/pexels-photo-12995508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
             </div>
             <h3 class="capitalize text-xl tracking-tight">they liked you</h3>
             <div class="chaticon rounded-full w-[3rem] h-[3rem] bg-white/20 flex items-center justify-center">
-                <i class="opacity-80  ri-chat-1-fill"></i>
+                <i class="opacity-80 ri-chat-1-fill"></i>
                 <div class="badge flex items-center justify-center | absolute w-5 h-5 rounded-full bg-red-700 top-5 right-5">
                     <h5 class="text-xs font-medium">5</h5>
                 </div>
